@@ -8,7 +8,6 @@
     background-color: #fff
     width: 68%
     margin: 0 auto
-    padding: 30px
     border-radius: 8px
     border: 1px solid #D3D3D3
 
@@ -16,9 +15,12 @@
       margin-bottom: 30px
 
     &.active #{$this}__content
-      display: block
+      max-height: 263px
 
-  &__text
+    &.active #{$this}__img
+      transform: rotate(180deg)
+
+  &__desc
     font-family: 'Inter'
     font-style: normal
     font-weight: 500
@@ -41,11 +43,6 @@
     border-radius: 3px
 
   &__header
-    display: flex
-    justify-content: space-between
-    margin-bottom: 30px
-
-  &__trigger
     font-family: 'Inter'
     font-style: normal
     font-weight: 700
@@ -53,6 +50,27 @@
     line-height: 29px
     background-color: transparent
     border: none
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    padding: 30px
 
   &__content
-    display: none
+    transition: max-height .3s cubic-bezier(0.72, 0.73, 0.23, 0.21)
+    max-height: 0
+    overflow: hidden
+
+  &__text
+    font-family: 'Inter'
+    font-style: normal
+    font-weight: 700
+    font-size: 24px
+    line-height: 29px
+
+  &__wrapper
+    padding: 30px
+    border-top: 1px solid #D3D3D3
+
+  &__img
+    transition: transform .3s cubic-bezier(0.72, 0.73, 0.23, 0.21)
