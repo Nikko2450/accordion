@@ -96,6 +96,9 @@ main {
 .accordion__panel:not(:last-of-type) {
   margin-bottom: 30px;
 }
+.accordion__panel.active .accordion__content {
+  display: block;
+}
 .accordion__text {
   font-family: "Inter";
   font-style: normal;
@@ -132,4 +135,7 @@ main {
   line-height: 29px;
   background-color: transparent;
   border: none;
+}
+.accordion__content {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
